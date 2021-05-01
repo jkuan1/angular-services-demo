@@ -1,6 +1,22 @@
 # Angular Demo on using Services
 
 Credits to **Maximilian Schwarzmulle** For the assignment details
+
+&nbsp; 
+
+# Solution explanation
+
+If you take a look at the main branch, you will see that the inactive and active components talk to each other using Input, Output, and EventEmitters.  
+While this is not a terrible method of making the app work, the implementation feels like a clunky chain and can be a problem if this app was any bigger or a little bit more complex. 
+
+## What I did:
+1. Create a UserService that will handle storing user status and change user status as well
+2. Make this service available to the app component, which in turn makes it available to its children, the inactive and active components 
+3. Remove the code that uses the old implementation in the ts files of the components and use the service instead. 
+4. Test that it works! The end result is the same behavior with a lot more streamlined implementation :) 
+
+I also injected a counter service into the user service that console.logs the number of times a user is moved to complete the second part of the assignment. 
+
 ## Services details:
 - We have a web application that works using emitters and listeners. Lets try to replace them with services instead! 
 - Check out the solutions branch for how I implemented services into this app :) 
